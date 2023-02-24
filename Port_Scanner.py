@@ -51,4 +51,4 @@ finally:
 
 print(f"\nAll ports within range {start_port} and {end_port} have been scanned. ")
 print(f"There are total of {total_ports} open on {host}")
-print(f"These are all open port:\n{open_ports}")
+print(f"These are all open ports:\n{open_ports}")
