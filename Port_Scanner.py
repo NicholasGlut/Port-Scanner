@@ -21,7 +21,7 @@ while True:
             if ping == 10035:
                 print("""Error code 10035 means socket has a non-blocking call.\nHost may be up.""")
             i = input("would you like to scan anyway (Y/N)? ")
-            if i == "Y":
+            if i.upper() == "Y":
                 break
             else:
                 continue
