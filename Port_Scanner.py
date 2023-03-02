@@ -11,12 +11,15 @@ while True:
         s.settimeout(1)     
         ping = s.connect_ex((host,80)) # Attempts conncetion to port 80
         print(f"ping returned {ping}")
+        
         if ping == 0:
             print(f"{host} is up.")
             break
         else:
             # Sometimes the ping does not return 0 but is up, takes this into account
             print(f"{host} is down.")
+            if ping == 10035:
+                print("""Error code 10035 means socket has a non-blocking call.\nHost may be up.""")
             i = input("would you like to scan anyway (Y/N)? ")
             if i == "Y":
                 break
